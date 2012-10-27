@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>dynamicfinder - public page</title>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet" />
+    <style>
+        #dynamicfinder { font-size:140%; font-weight:500; text-shadow:0.5px 0.5px 0px #888; }
+        .dynamic { color:#2FE01B; }
+        .finder { color:#1B9EE0; }
+        h2 {
+            display: block;
+			width: 100%;
+			padding: 0px;
+			margin-bottom: 20px;
+			font-size: 20px;
+			font-weight:100;
+			line-height: 40px;
+			color: rgb(51, 51, 51);
+			border-width: 0px 0px 1px;
+			border-style: none none solid;
+			border-color: -moz-use-text-color -moz-use-text-color;
+        }
+        #footer { margin-top:-15px; color:#787878; }
+        #footer a:hover { color:C80000; }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="https://github.com/dynamicfinder">
+                    <span id="dynamicfinder">
+                        <span class="dynamic">dynamic</span><span class="finder">finder</span>
+                    </span>
+                </a>
+                <div class="nav-collapse collapse">
+		            <ul class="nav">
+		                <li><a href="https://github.com/dynamicfinder/dynamicfinder">Source</a></li>
+		                <li><a href="https://github.com/dynamicfinder/dynamicfinder/issues">Issues</a></li>
+		                <li><a href="https://github.com/dynamicfinder/dynamicfinder/wiki">Wiki</a></li>
+		                <li><a href="https://github.com/dynamicfinder/dynamicfinder-example">Example</a></li>
+		                <li><a target="_blank" href="https://dynamicfinder.ci.cloudbees.com/">Build Status</a></li>
+		            </ul>
+		        </div>
+            </div>
+        </div>
+    </div>
+
+    <br/><br/>
+
+    <div class="container">
+        <h1>Welcome to <span class="dynamic">dynamic</span><span class="finder">finder</span> !</h1>
+
+        <h2>What Is That?</h2>
+        <p>
+        <span class="dynamic">dynamic</span><span class="finder">finder</span>, 
+        as per project description, is a simple library for finding and scrolling 
+        data across application layer in java application. What does it mean? 
+        It's mean that, <span class="dynamic">dynamic</span><span class="finder">finder</span> 
+        simplify your task when trying to create tabular page with masive search 
+        capability.
+        </p>
+        <br/>
+
+        <h2>Huh..?! Show Me The Code</h2>
+        <p>
+        This is snippet in business logic part: 
+        <a href="https://github.com/dynamicfinder/dynamicfinder-example">from our example code:</a>
+        <br/>
+        <script src="https://gist.github.com/3966643.js?file=smarten.js"></script>
+        <br/>
+        and this is snippet from controller/presentation layer:
+        <br/>
+        <script src="https://gist.github.com/3966690.js?file=smarten.js"></script>
+        <br/><br/>
+        </p>
+
+        <h2>Hmm.. Looks Like Just Another Flawed CRUD Library Without 'C', 'U', and 'D' For Me</h2>
+        <p>
+        Yes, you probably right. We only provide 'R' part from just all CRUD activity. 
+        And perhaps another library give you better features, like GenericCRUD or 
+        something like that. But in our experience, GenericCRUD things doesn't fit 
+        in <strong>complex scenario</strong>, when something like 
+        <strong>transaction strategies</strong> and <strong>advanced validation</strong> 
+        scenario comes in mind. And still, as far as we know, GenericCRUD doesn't 
+        provide you proper way for searching and scrolling data in tabular format.
+        </p>
+
+        <p>
+        In our opinion, Java has excellent API to 'Create', 'Update', and 'Delete' 
+        operation when deal with RDBMS, named Java Persistence API (JPA). If JPA doesn't 
+        fit to you, there's another API named Java Data Object (JDO), where you 
+        would use intensively when deploy your application in Google App Engine. 
+        Wrapping C.U.D is not essential. The only missing part of Java Data API 
+        is <strong>a proper way to create query for finding and scrolling data 
+        dynamically</strong>. 
+        </p>
+        <br/>
+
+        <h2>I Get It, How Do I Start?</h2>
+        <p>
+        Unfortunately, currently we only have limited library without production 
+        quality code. You could 
+        <a href="https://github.com/dynamicfinder/maven-repository/tree/master/snapshots/org/dynamicfinder/dynamicfinder/0.0.1-SNAPSHOT">
+        download it here.</a>. Or if you're maven users, add following code 
+        to your pom.xml:
+        <pre>
+        &lt;!-- For Dependency --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.dynamicfinder&lt;/groupId&gt;
+            &lt;artifactId&gt;dynamicfinder&lt;/artifactId&gt;
+            &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+            &lt;scope&gt;compile&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- For Repository --&gt;
+        &lt;repository&gt;
+            &lt;id&gt;dynamicfinder-repository&lt;/id&gt;
+            &lt;name&gt;Dynamic Finder Maven Repository&lt;/name&gt;
+            &lt;url&gt;https://github.com/dynamicfinder/maven-repository/raw/master/snapshots&lt;/url&gt;
+        &lt;/repository&gt;
+        </pre>
+        </p>
+        <br/>
+
+        <h2>You Talked So Much And Now Give Me 0.0.1-SNAPHSOT?!?</h2>
+        <p>
+        We know, and we apologize for this. However, this is an opensource project. 
+        Any contribution would be helpful, including:
+        <ul>
+            <li><a href="https://github.com/dynamicfinder/dynamicfinder">Cloning the project and hacking with it.</a></li>
+            <li>Fill an <a href="https://github.com/dynamicfinder/dynamicfinder/issues">idea or issue.</a></li>
+            <li>Spread this project around the world by blogging or tweeting about this project.</li>
+        </ul>
+        </p>
+        <br/>
+
+        <h2>Understood. Anything Else?</h2>
+        <p>
+        Only for advertisement:<br/>
+        Special thanks for folks at <a href="http://www.cloudbees.com/">cloudbees</a> 
+        that provide <a href="https://dynamicfinder.ci.cloudbees.com/">free jenkins servers</a> 
+        for our project.
+        </p>
+
+        <hr/>
+	    <footer id="footer">
+	        <div style="text-align:center;">
+	        <img src="http://www.cloudbees.com/sites/default/files/Button-Built-on-CB-1.png" />
+	        <img src="http://www.cloudbees.com/sites/default/files/Button-Powered-by-CB.png" />
+	        </div>
+	    </footer>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
